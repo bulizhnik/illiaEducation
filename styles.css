@@ -54,21 +54,24 @@ ul.nav-list li a{
 .banner{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-image: url("images/banner-page.png");
     background-clip: border-box;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 h2.banner-title{
+    max-width: 1075px;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 200%;
     color: #fff;
     text-align: center;
     align-self: center;
-    padding: 17rem;
-    padding-left: 22%;
-    padding-right: 22%;
+    padding: 14%;
+    /* padding-left: 22%;
+    padding-right: 22%; */
 }
 
 main{
@@ -78,15 +81,19 @@ main{
 
 .container1 {
     justify-content: center;
-    padding-top: 4rem;
+    padding: 4rem 2rem 0;
 }
 
 .container2 {
     flex-direction: column;
     justify-content: center;
     background-color: #313131;
-    padding-top: 4rem;
+    padding: 4rem 2rem 0;
     align-items: center;
+}
+
+.container5{
+    padding: 0 2rem;
 }
 
 .block1{
@@ -212,7 +219,7 @@ h1.light, h2.light, p.light{
     font-weight: bold;
     font-size: 1.75rem;
     color: #11977E;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 }
 
 .card-info h2.title::after{
@@ -293,21 +300,11 @@ button p{
     -webkit-box-orient: vertical; */
 }
 
-.container5 .button {
+.container5 button {
     background-color: #11977E;
-    border-radius: 1rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
-.container5 button{
-    border-radius: 1rem;
-}
-
-.container5 .button p{
-    font-size: 1.5rem;
+    border-radius: 1.2rem;
+    padding: 0.7rem 3rem;
+    font-size: 1.3rem;
 }
 
 footer{
@@ -354,7 +351,7 @@ footer{
 }
 
 .copyright{
-    width: 90rem;
+    width: 80%;
     align-items: center;
 }
 
@@ -363,14 +360,19 @@ footer{
     color: #A29999;
 }
 
-svg{
-    display: none;
-}
-
 .divider-footer{
     width: 15%;
     height: 1px;
     background-color: #1A1A1A;
+}
+
+button:hover{
+    background-color: #1A1A1A;
+}
+
+a.link:hover{
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -395,13 +397,21 @@ svg{
         height: 33rem;
     }
 
-    .container1, .container3, .container4{
+    .container1, .container4{
         flex-direction: column;
     }
 
     .container2{
         flex-direction: column-reverse;
         padding-top: 2.5rem;
+    }
+
+    .block1{
+        flex-direction: column-reverse;
+    }
+
+    .block2{
+        padding-top: 0;
     }
 
     .container3, .container4, .container5{
@@ -430,20 +440,25 @@ svg{
         -webkit-box-orient: vertical;
     }
 
-    .divider {
-        width: 90%;
-        margin-left: 5%;
-        height: 1px;
-        background-color: #11977E;
-    }
-
     .text{
         padding-top: 1.4rem;
         padding-bottom: 1.4rem;
         display: block;
     }
 
-    .link a{
+    .card-info .text{
+        padding: 0;
+    }
+
+    .card-info .darker{
+        color: #D6D6D6;
+    }
+
+    .light p{
+        color: #D6D6D6;
+    }
+
+    a.link{
         font-size: 1.1rem;
     }
 
@@ -455,11 +470,22 @@ svg{
         padding-right: 1rem;
     }
 
-    .container3 .scroller{
+    .block2 .scroller{
         flex-direction: column;
         align-items: center;
-        padding-bottom: 2.5rem;
         padding-top: 2.5rem;
+    }
+
+    .scroller .card-item{
+        padding: 2rem 1rem;
+    }
+
+    .scroller .card-item:first-child{
+        padding-top: 0;
+    }
+
+    .scroller .card-item:last-child{
+        padding-bottom: 0;
     }
 
     .container4 .scroller{
@@ -469,58 +495,28 @@ svg{
         padding-top: 2.5rem;
     }
 
-    .scroller .card-item{
-        display: none;
-    }
-    .scroller .card-item:first-child{
-        display: flex;
-    }
-
-    svg{
-        display: block;
-    }
-
-    button p{
+    button{
         padding: 0;
+    }
+
+    .card-item button{
+        padding: .6rem 1.5rem;
     }
 
     .container5{
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0 1rem 4rem;
     }
 
     .container5 .text {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 1.5rem 0;
     }
 
-    .container5 .text p{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .container5 .button{
+    .container5 button{
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 0;
-    }
-
-    .button button{
-        width: 100%;
-        padding: 0;
+        padding: 0 .7rem;
         font-size: 1.2rem;
-    }
-
-    .container5 button p{
-        font-size: 1.2rem !important;
-    }
-
-    .button .button-text{
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
     }
 
     .footer{
@@ -546,5 +542,9 @@ svg{
 
     .copyright{
         width: auto;
+    }
+
+    a.link:hover{
+        font-size: 1.2rem;
     }
 }
