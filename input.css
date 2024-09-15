@@ -10,13 +10,6 @@ h2:after{
     @apply block content-[""] w-3/5 h-px bg-custom-dark mx-auto my-0;
 }
 
-/* .five-line-text{
-    @apply overflow-hidden text-ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-  } */
 .max-w-84{
     max-width: 21rem; /* 336px */
 }
