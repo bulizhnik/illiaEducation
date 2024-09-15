@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2:after{
+    @apply content-[""] w-6/12 h-px block bg-main-green mx-auto my-0;
+}
+
+.navbar-footer::before {
+    @apply block content-[""] w-3/5 h-px bg-custom-dark mx-auto my-0;
+}
+
+/* .five-line-text{
+    @apply overflow-hidden text-ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+  } */
+.max-w-84{
+    max-width: 21rem; /* 336px */
+}
+
+.max-w-160{
+    max-width: 40rem; /* 640px */
+}
+
+.banner-text{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2;
+}
