@@ -17,9 +17,3 @@ h2:after{
 .max-w-160{
     max-width: 40rem; /* 640px */
 }
-
-.banner-text{
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2;
-}

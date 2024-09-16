@@ -6,7 +6,7 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <header class="flex flex-row justify-around items-center my-4">
+  <header class="flex flex-row justify-around items-center m-4">
     <a class="inline-flex flex-row items-center text-xl" href="./index.html">
       <svg style="padding-right: 0.5rem;" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="19.5" cy="19.5" r="19.5" fill="#11977E"/>
@@ -15,68 +15,82 @@
       <span style="color: #11977E;">Here</span>
     </a>
 
-    <ul class="flex flex-row justify-between">
+    <ul class="hidden md:flex flex-row justify-between">
       <li class="p-4"><a class="text-base uppercase hover:underline" href="#">home</a></li>
       <li class="p-4"><a class="text-base uppercase hover:underline" href="#">about</a></li>
       <li class="p-4"><a class="text-base uppercase hover:underline" href="#">products</a></li>
       <li class="p-4"><a class="text-base uppercase hover:underline" href="#">contacts</a></li>
     </ul>
+
+    <!-- Menu -->
+     <div class="block md:hidden">
+      <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="45" height="45" fill="url(#pattern0_129_2408)"/>
+        <defs>
+        <pattern id="pattern0_129_2408" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_129_2408" transform="scale(0.0104167)"/>
+        </pattern>
+        <image id="image0_129_2408" width="96" height="96" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoElEQVR4nO3bwQmDQBRF0Snpvy5i+l8rSPowZBckQ3AhA3oO2MD7uvO2BgAAAAAdVfVMsiTZPPneYKmq6fQXp6pWw6f38r0cINc/wJRk9hVkP/5nk8fpBwAAAAAAAAAAAADgOvQB6f0ZrQ/I+GhEH5AbHEAfkJ/j6wMAAAAAAAAAAAAAOEYfEH1AxncA+oCMH1sfkPGD6wMAAAAAAID2zxvuU0GBOuTJvQAAAABJRU5ErkJggg=="/>
+        </defs>
+      </svg>
+     </div>
+    
   </header>
   <main class="flex flex-col">
 
     <!-- Banner -->
-    <div class="h-96 bg-[url('images/banner-page.png')] bg-cover bg-no-repeat bg-clip-border flex items-center justify-center">
-      <h1 class="max-w-5xl p-10 text-white banner-text text-center tracking-wide">
+    <div class="h-52 sm:h-72 md:h-96 bg-[url('images/banner-page.png')] bg-cover bg-no-repeat bg-clip-border flex items-center justify-center">
+      <h1 class="max-w-5xl p-5 text-white text-xl font-bold text-center tracking-wide sm:text-2xl md:p-10 md:text-3xl">
         Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit.
       </h1>
     </div>
 
     <!-- Contaienr with text on the left and image on the right -->
-    <div class="flex flex-row justify-center px-4 pt-8">
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 md:space-y-0 px-4 pt-4 md:pt-8">
 
       <!-- Text block -->
       <div class="max-w-160 flex flex-col items-center">
-        <h2 class="size-fit text-center text-3xl text-title-color custom-divider">
+        <h2 class="size-fit text-center text-xl md:text-3xl text-title-color custom-divider">
           Lorem ipsum dolor sit amet
         </h2>
-        <h3 class="size-fit text-center text-xl text-title-color">
+        <h3 class="size-fit text-center text-lg md:text-xl text-title-color ">
           Lorem ipsum dolor sit amet
         </h3>   
-        <p class="py-10 text-base text-darker-color line-clamp-5">
+        <p class="py-4 md:py-10 text-sm md:text-base text-darker-color line-clamp-5 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis.
         </p>
-        <a class="inline-flex justify-center text-lg text-main-green underline hover:text-xl hover:no-underline" href="#">You can learn more about the sample here</a>
+        <a class="inline-flex justify-center text-sm sm:text-base md:text-lg text-main-green underline md:hover:text-xl hover:no-underline" href="#">You can learn more about the sample here</a>
       </div>
 
       <!-- Image -->
       <picture class="pl-4">
-        <source media="(min-width:651px)" srcset="images/phone1.png">
+        <source media="(min-width:768px)" srcset="images/phone1.png">
         <source srcset="images/phone1-mobile.png">
         <img class="max-w-fit" src="images/phone1.png" alt="Here was an image, return it please">
       </picture> 
     </div>
 
     <!-- Contaienr with dark bg and image on the left and text on the right -->
-    <div class="bg-custom-dark flex flex-row-reverse justify-center px-4 pt-16">
+    <div class="bg-custom-dark flex flex-col sm:flex-row-reverse justify-center space-y-8 md:space-y-0 px-4 pt-16 md:pt-8 items-center">
 
       <!-- Text block -->
       <div class="max-w-160 flex flex-col items-center">
-        <h2 class="size-fit text-center text-3xl text-lighter-color custom-divider">
+        <h2 class="size-fit text-center text-xl md:text-3xl text-lighter-color custom-divider">
           Lorem ipsum dolor sit amet
         </h2>
-        <h3 class="size-fit text-center text-xl text-lighter-color">
+        <h3 class="size-fit text-center text-lg md:text-xl text-lighter-color">
           Lorem ipsum dolor sit amet
         </h3>   
-        <p class="py-10 text-base text-lighter-color line-clamp-5">
+        <p class="py-10 text-sm md:text-base text-lighter-color line-clamp-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis.
         </p>
-        <a class="inline-flex justify-center text-lg text-main-green underline hover:text-xl hover:no-underline" href="#">You can learn more about the sample here</a>
+        <a class="inline-flex justify-center text-sm sm:text-base md:text-lg text-main-green underline md:hover:text-xl hover:no-underline" href="#">You can learn more about the sample here</a>
       </div>
 
       <!-- Image -->
-      <picture class="pr-20 pb-1">
-        <source media="(min-width:651px)" src="images/phone2.png">
-        <source src="images/phone2-mobile.png">
+      <picture class="sm:pr-4 md:pr-10 xl:pr-20 pb-1">
+        <source media="(min-width:768px)" srcset="images/phone2.png">
+        <source srcset="./images/phone2-mobile.png">
         <img class="max-w-fit" src="images/phone2.png" alt="Here was an image, return it please">
       </picture> 
     </div>
@@ -84,83 +98,83 @@
     <!-- Container with dark bg and cards -->
     <div class="bg-custom-dark flex flex-col items-center space-y-12 px-4 py-16">
 
-      <h2 class="size-fit text-center text-3xl text-lighter-color custom-divider">
+      <h2 class="size-fit text-center text-xl md:text-3xl text-lighter-color custom-divider">
         Lorem ipsum dolor sit amet
       </h2>
       <!-- Crad holder -->
-      <div class="flex flex-row justify-evenly space-x-7">
+      <div class="flex flex-col md:flex-row justify-evenly md:space-x-7 space-y-8 md:space-y-0">
 
         <!-- Card -->
         <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic1.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
 
          <!-- Card -->
          <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic2.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
 
          <!-- Card -->
          <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic3.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-lighter-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
       </div>
     </div>
 
     <!-- Container with white bg and cards -->
-    <div class="flex flex-col items-center space-y-12 px-4 py-16">
+    <div class="flex flex-col items-center space-y-12 px-4 py-10 md:py-16">
 
-      <h2 class="size-fit text-center text-3xl text-title-color custom-divider">
+      <h2 class="size-fit text-center text-xl md:text-3xl text-title-color custom-divider">
         Lorem ipsum dolor sit amet
       </h2>
       <!-- Crad holder -->
-      <div class="flex flex-row justify-evenly space-x-7">
+      <div class="flex flex-col md:flex-row justify-evenly md:space-x-7 space-y-8 md:space-y-0">
         
         <!-- Card -->
         <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic4.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
 
          <!-- Card -->
          <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic5.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
 
          <!-- Card -->
          <div class="flex flex-col space-y-4 items-center">
           <img class="max-w-fit" src="./images/circle-pic6.png" alt="cirlce image">
-          <h3 class="text-xl text-main-green custom-divider">Lorem Ipsum</h3>
-          <p class="max-w-84 text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
+          <h3 class="text-lg md:text-xl text-main-green custom-divider">Lorem Ipsum</h3>
+          <p class="max-w-84 text-sm md:text-base text-darker-color line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis. </p>
           <button class="py-2 px-4 bg-main-green rounded-xl w-fit text-base text-white hover:bg-sub-green">Read more >></button>
         </div>
       </div>
     </div>
 
     <!-- Container "send email" -->
-    <div class="flex flex-col items-center space-y-12 px-36 pt-8 pb-20">
+    <div class="flex flex-col items-center space-y-4 md:space-y-12 px-4 lg:px-24 xl:px-36 pt-8 pb-20 md:px-16">
 
-      <h2 class="size-fit text-center text-3xl text-title-color custom-divider">
+      <h2 class="size-fit text-center text-xl md:text-3xl text-title-color custom-divider">
         Lorem ipsum dolor sit amet
       </h2>
-      <p class="text-darker-color text-base line-clamp-2">
+      <p class="text-darker-color text-sm md:text-base line-clamp-2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat commodo vitae mattis.
       </p>
-      <button class="py-3 px-16 bg-main-green rounded-2xl w-fit text-base text-white hover:bg-sub-green">Button</button>
+      <button class="py-3 px-16 bg-main-green w-full rounded-2xl md:w-fit text-base text-white hover:bg-sub-green">Button</button>
     </div>
 
   </main>
@@ -207,16 +221,16 @@
         </svg>     
       </div>
 
-      <ul class="flex flex-row justify-between navbar-footer">
-        <li class="p-4"><a class="text-base uppercase " href="#">home</a></li>
-        <li class="p-4"><a class="text-base uppercase " href="#">about</a></li>
-        <li class="p-4"><a class="text-base uppercase " href="#">products</a></li>
-        <li class="p-4"><a class="text-base uppercase " href="#">contacts</a></li>
+      <ul class="flex flex-col sm:flex-row justify-between navbar-footer">
+        <li class="p-4 text-center"><a class="text-base uppercase hover:underline" href="#">home</a></li>
+        <li class="p-4 text-center"><a class="text-base uppercase hover:underline" href="#">about</a></li>
+        <li class="p-4 text-center"><a class="text-base uppercase hover:underline" href="#">products</a></li>
+        <li class="p-4 text-center"><a class="text-base uppercase hover:underline" href="#">contacts</a></li>
       </ul>
     </div>
 
     <!-- Copyright -->
-    <p class="text-sm text-darker-color py-2 pl-8">Copyright 2015 by Company Name, Powered by Andrei Clompos</p>
+    <p class="text-xs sm:text-sm text-darker-color py-2 px-4 md:pl-8">Copyright 2015 by Company Name, Powered by Andrei Clompos</p>
   </footer>
 </body>
 </html>
